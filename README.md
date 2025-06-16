@@ -25,7 +25,7 @@ Easy-to-use web interface using Streamlit
 
 🛠️ How to Set Up
 1. Clone this project
-git clone https://github.com/your-username/multi-agent-rag-sql.git
+git clone https://github.com/rog05/Multi-Agent-RAG-System-for-Natural-Language-Querying-of-a-Relational-Database
 cd multi-agent-rag-sql
 2. Create and activate a virtual environment
 python -m venv venv
@@ -105,5 +105,4 @@ Add support for PDFs or documents
 
 🧑‍💻 Made By
 Rohan Gaikwad
-📧 rohang@example.com
-🔗 LinkedIn
+gaikwadrohan8652@gmail.com
