@@ -5,7 +5,7 @@ Multi-Agent RAG System – Chat with Your Database
 
 A smart web app that lets you ask natural language questions and get answers directly from your database (SQLite, MySQL, or PostgreSQL) using LangChain + Groq + Streamlit.
 
-✅ What This App Can Do
+**✅ What This App Can Do**
 
 - Ask: “How many customers joined last year?”
 - Works with SQLite, MySQL, or PostgreSQL
@@ -17,11 +17,12 @@ A smart web app that lets you ask natural language questions and get answers dir
 - Handles errors gracefully with helpful messages
 - Clean, interactive web UI with Streamlit
 
-🛠️ Setup Instructions
+**🛠️ Setup Instructions**
 
 1. Clone the Project
 
 git clone https://github.com/rog05/Multi-Agent-RAG-System-for-Natural-Language-Querying-of-a-Relational-Database.git
+
 cd Multi-Agent-RAG-System-for-Natural-Language-Querying-of-a-Relational-Database
 
 2. Create and Activate Virtual Environment
@@ -42,7 +43,7 @@ pip install -r requirements.txt
 
 streamlit run app.py
 
-🔑 Get Your Groq API Key
+**🔑 Get Your Groq API Key**
 
 1. Visit: https://console.groq.com/keys
 2. Sign up / Log in
@@ -69,14 +70,14 @@ streamlit run app.py
    - Execute the query
    - Show you a clean, human-readable answer and SQL explanation
 
-🧠 Agents Behind the Scenes
+**🧠 Agents Behind the Scenes**
 
 - Schema Agent: Finds relevant tables and columns
 - SQL Generator: Creates the SQL query using Groq AI
 - Retriever: Executes SQL and fetches results
 - Synthesizer: Converts raw results into a human-friendly response
 
-⚠️ Error Handling
+**⚠️ Error Handling**
 
 Gracefully manages:
 - Table not found
@@ -85,7 +86,7 @@ Gracefully manages:
 
 Shows helpful messages to guide you instead of crashing.
 
-📦 Optional Improvements (Future Scope)
+**📦 Optional Improvements (Future Scope)**
 
 - Add vector database fallback if SQL fails
 - Document (PDF) data querying support
