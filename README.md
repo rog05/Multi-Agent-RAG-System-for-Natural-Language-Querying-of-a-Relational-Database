@@ -1,112 +1,96 @@
 # Multi-Agent-RAG-System-for-Natural-Language-Querying-of-a-Relational-Database
 
 
-🧠 Multi-Agent RAG System – Chat with Your Database
-This is a simple web app where you can ask questions in English, and it will talk to your database (PostgreSQL, MySQL, or SQLite) and give you answers using AI (Groq + LangChain).
+Multi-Agent RAG System – Chat with Your Database
+
+A smart web app that lets you ask natural language questions and get answers directly from your database (SQLite, MySQL, or PostgreSQL) using LangChain + Groq + Streamlit.
 
 ✅ What This App Can Do
-Ask questions like “How many customers joined last year?”
 
-Works with SQLite, MySQL, or PostgreSQL
+- Ask: “How many customers joined last year?”
+- Works with SQLite, MySQL, or PostgreSQL
+- Breaks down the query into smart steps using multi-agents:
+  - Identify relevant tables
+  - Generate SQL query
+  - Run the query
+  - Convert result into a human-readable answer
+- Handles errors gracefully with helpful messages
+- Clean, interactive web UI with Streamlit
 
-Breaks the task into smart steps (agents):
+🛠️ Setup Instructions
 
-Find the right tables
+1. Clone the Project
 
-Write the SQL query
-
-Run the query
-
-Turn the result into a human answer
-
-Shows helpful messages if something goes wrong
-
-Easy-to-use web interface using Streamlit
-
-🛠️ How to Set Up
-
-**1. Clone this project**
 git clone https://github.com/rog05/Multi-Agent-RAG-System-for-Natural-Language-Querying-of-a-Relational-Database.git
 cd Multi-Agent-RAG-System-for-Natural-Language-Querying-of-a-Relational-Database
 
-**2. Create and activate a virtual environment**
+2. Create and Activate Virtual Environment
+
 python -m venv venv
-# For Windows
+
+For Windows:
 venv\Scripts\activate
-# For Mac/Linux
+
+For Mac/Linux:
 source venv/bin/activate
 
-**3. Install required packages**
-pip install -r requirements.txt
-Your requirements.txt should include:
+3. Install Requirements
 
-4. Run the app
+pip install -r requirements.txt
+
+4. Run the App
 
 streamlit run app.py
 
-**🔑 How to Get the Groq API Key**
+🔑 Get Your Groq API Key
 
-Go to https://console.groq.com/keys
+1. Visit: https://console.groq.com/keys
+2. Sign up / Log in
+3. Click on Create API Key
+4. Copy the key and paste it in the sidebar input box of the app
 
-Sign up or log in
+💬 How to Use the App
 
-Click on Create API Key
+1. Choose your database from the sidebar:
+   - SQLite (default)
+   - MySQL (enter host, user, password, database)
+   - PostgreSQL (enter host, user, password, database)
 
-Copy the key and paste it into the sidebar in the app where it says Groq API Key
+2. Paste your Groq API key
 
-**##💬 How to Use**
+3. Ask a question, such as:
+   - “List all employees in the Marketing team”
+   - “Show me the sales in Q1 2024”
+   - “How many customers joined in the last 6 months?”
 
-Select your database from the sidebar:
+4. The app will:
+   - Understand your question
+   - Generate SQL
+   - Execute the query
+   - Show you a clean, human-readable answer and SQL explanation
 
-SQLite (default)
+🧠 Agents Behind the Scenes
 
-MySQL (enter host, user, password, db name)
+- Schema Agent: Finds relevant tables and columns
+- SQL Generator: Creates the SQL query using Groq AI
+- Retriever: Executes SQL and fetches results
+- Synthesizer: Converts raw results into a human-friendly response
 
-PostgreSQL (enter host, user, password, db name)
+⚠️ Error Handling
 
-Paste your Groq API key in the input box
+Gracefully manages:
+- Table not found
+- Invalid SQL
+- No matching data
 
-Type a question like:
+Shows helpful messages to guide you instead of crashing.
 
-“List all employees in the Marketing team”
+📦 Optional Improvements (Future Scope)
 
-“Show me the sales in Q1 2024”
+- Add vector database fallback if SQL fails
+- Document (PDF) data querying support
 
-“How many customers joined in the last 6 months?”
+👨‍💻 Made By
 
-The app will:
-
-Understand the question
-
-Generate SQL
-
-Run it
-
-Show you a clean answer + SQL steps
-
-**##🧠 Behind the Scenes (Agents Used)**
-🧩 Schema Agent – finds which tables and columns to use
-
-💡 SQL Generator – writes the SQL query using Groq AI
-
-🧮 Retriever – runs the query and gets results
-
-📄 Synthesizer – gives you a nice human answer
-
-**##⚠️ Handles Errors Like**
-Table not found
-
-Bad SQL
-
-No data found
-
-And shows a helpful message instead of crashing.
-
-
-##📦 Optional Improvements
-Add vector database fallback if SQL fails
-Add support for PDFs or documents
-
-🧑‍💻 Made By
 Rohan Gaikwad
 gaikwadrohan8652@gmail.com
