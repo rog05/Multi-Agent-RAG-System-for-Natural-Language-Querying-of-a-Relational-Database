@@ -17,7 +17,7 @@ A smart web app that lets you ask natural language questions and get answers dir
 - Handles errors gracefully with helpful messages
 - Clean, interactive web UI with Streamlit
 
-![Uploading WhatsApp Image 2025-06-16 at 15.58.35_eb27ba20.jpg…]()
+![ Screenshot](![WhatsApp Image 2025-06-16 at 15 58 35_582595eb](https://github.com/user-attachments/assets/7a34c905-21a0-4617-9c47-6911c6935631))
 
 
 **🛠️ Setup Instructions**
