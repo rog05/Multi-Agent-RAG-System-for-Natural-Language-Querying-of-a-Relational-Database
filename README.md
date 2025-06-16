@@ -24,16 +24,19 @@ Shows helpful messages if something goes wrong
 Easy-to-use web interface using Streamlit
 
 🛠️ How to Set Up
-1. Clone this project
-git clone https://github.com/rog05/Multi-Agent-RAG-System-for-Natural-Language-Querying-of-a-Relational-Database
-cd multi-agent-rag-sql
-2. Create and activate a virtual environment
+
+**1. Clone this project**
+git clone https://github.com/rog05/Multi-Agent-RAG-System-for-Natural-Language-Querying-of-a-Relational-Database.git
+cd Multi-Agent-RAG-System-for-Natural-Language-Querying-of-a-Relational-Database
+
+**2. Create and activate a virtual environment**
 python -m venv venv
 # For Windows
 venv\Scripts\activate
 # For Mac/Linux
 source venv/bin/activate
-3. Install required packages
+
+**3. Install required packages**
 pip install -r requirements.txt
 Your requirements.txt should include:
 
@@ -41,7 +44,8 @@ Your requirements.txt should include:
 
 streamlit run app.py
 
-##🔑 How to Get the Groq API Key
+**🔑 How to Get the Groq API Key**
+
 Go to https://console.groq.com/keys
 
 Sign up or log in
@@ -50,7 +54,8 @@ Click on Create API Key
 
 Copy the key and paste it into the sidebar in the app where it says Groq API Key
 
-💬 How to Use
+**##💬 How to Use**
+
 Select your database from the sidebar:
 
 SQLite (default)
@@ -79,7 +84,7 @@ Run it
 
 Show you a clean answer + SQL steps
 
-🧠 Behind the Scenes (Agents Used)
+**##🧠 Behind the Scenes (Agents Used)**
 🧩 Schema Agent – finds which tables and columns to use
 
 💡 SQL Generator – writes the SQL query using Groq AI
@@ -88,7 +93,7 @@ Show you a clean answer + SQL steps
 
 📄 Synthesizer – gives you a nice human answer
 
-⚠️ Handles Errors Like
+**##⚠️ Handles Errors Like**
 Table not found
 
 Bad SQL
@@ -100,7 +105,6 @@ And shows a helpful message instead of crashing.
 
 ##📦 Optional Improvements
 Add vector database fallback if SQL fails
-
 Add support for PDFs or documents
 
 🧑‍💻 Made By
